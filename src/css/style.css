@@ -213,6 +213,11 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+
+}
+
+main img{
+    margin-bottom: 150px;
 }
 
 .description-main {
@@ -285,9 +290,7 @@ main {
     background-color: #ffff;
 }
 
-.layout {
-    position: relative;
-}
+
 
 
 .shapeDesign {
@@ -295,13 +298,13 @@ main {
     min-width: 248px;
     height: 24.653vw;
     min-height: 180px;
-    border-bottom-left-radius: 13.889vw;
-    border-top-left-radius: 13.889vw;
+    border-bottom-left-radius: 200px;
+    border-top-left-radius: 200px;
     background-color: var(--soft-blue);
     position: absolute;
     z-index: -2;
-    right: -5%;
-    bottom: -40%;
+    right: 0;
+    top: 90%;
 }
 
 .second-section-top {
@@ -354,26 +357,26 @@ main {
     margin-left: 50px;
 }
 
-.layout2 {
-    position: relative;
-    height: 24.653vw;
 
-}
 
 .shapeDesign2 {
     width: 34.028vw;
     min-width: 248px;
     height: 24.653vw;
     min-height: 180px;
-    border-bottom-right-radius: 13.889vw;
-    border-top-right-radius: 13.889vw;
+    border-bottom-right-radius: 200px;
+    border-top-right-radius: 200px;
     background-color: var(--soft-blue);
     position: absolute;
     z-index: -1;
-    left: -20%;
-    bottom: 45%;
+    left: 0;
+    top: 210%;
 
 
+}
+
+.secondSectionImagesContainer .imagem{
+  margin-bottom: 140px;
 }
 
 .descriptionContainer {
@@ -484,6 +487,7 @@ main {
     background-position: right;
     background-position-y: 10%;
     padding: 10px;
+    cursor: pointer;
 }
 
 .accordeonFaq li.ativo {
@@ -492,6 +496,14 @@ main {
     background-position: right;
     background-position-y: 10%;
 
+}
+
+.question .answer{
+    display: none;
+}
+
+.question.ativo .answer{
+    display: block;
 }
 
 .accordeonFaq li:last-child {
@@ -768,3 +780,24 @@ footer i:hover {
 
 
 }
+
+@media(max-width:600px){
+    .shapeDesign{
+        top: 90%;
+    }
+
+    .shapeDesign2{
+        top:340%;
+    }
+}
+
+@media(max-width:350px){
+    .shapeDesign{
+        top: 70%;
+    }
+
+    .shapeDesign2{
+        top:280%;
+    }
+}
+
