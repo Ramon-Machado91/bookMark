@@ -9,6 +9,51 @@ closeIcon.addEventListener('click',()=>{
     menuBlue.classList.add('hidden')
 })
 
+const imagens = document.querySelectorAll('.imagem');
+const mensagens = document.querySelectorAll('.descriptionContainer');
+const abas = document.querySelectorAll('.tab')
+
+function mudaAba1(){
+    imagens[0].classList.remove('hidden');
+    imagens[1].classList.add('hidden')
+    imagens[2].classList.add('hidden');
+    mensagens[0].classList.remove('hidden');
+    mensagens[1].classList.add('hidden')
+    mensagens[2].classList.add('hidden');
+    abas[0].classList.add('active');
+    abas[1].classList.remove('active')
+    abas[2].classList.remove('active');
+    
+}
+
+function mudaAba2(){
+    imagens[0].classList.add('hidden');
+    imagens[1].classList.remove('hidden')
+    imagens[2].classList.add('hidden');
+    mensagens[0].classList.add('hidden');
+    mensagens[1].classList.remove('hidden')
+    mensagens[2].classList.add('hidden');
+    abas[0].classList.remove('active');
+    abas[1].classList.add('active')
+    abas[2].classList.remove('active');
+    
+}
+
+function mudaAba3(){
+    imagens[0].classList.add('hidden');
+    imagens[1].classList.add('hidden')
+    imagens[2].classList.remove('hidden');
+    mensagens[0].classList.add('hidden');
+    mensagens[1].classList.add('hidden')
+    mensagens[2].classList.remove('hidden');
+    abas[0].classList.remove('active');
+    abas[1].classList.remove('active')
+    abas[2].classList.add('active');
+    
+}
+
+
+
 
 
 const perguntas = document.querySelectorAll(".question");
@@ -25,3 +70,4 @@ perguntas.forEach(element => {
     
     })
 });
+

@@ -216,9 +216,7 @@ main {
 
 }
 
-main img{
-    margin-bottom: 150px;
-}
+
 
 .description-main {
     width: 34.722vw;
@@ -291,7 +289,10 @@ main img{
 }
 
 
-
+.layout{
+    position: relative;
+    margin-bottom: 50px;
+}
 
 .shapeDesign {
     width: 34.028vw;
@@ -303,8 +304,9 @@ main img{
     background-color: var(--soft-blue);
     position: absolute;
     z-index: -2;
-    right: 0;
-    top: 90%;
+    right: -5%;
+    bottom: 50%;
+    
 }
 
 .second-section-top {
@@ -324,7 +326,7 @@ main img{
 
 }
 
-.menuFeatures a li {
+.menuFeatures li {
     font-size: 16px;
     color: var(--medium-gray);
     border-bottom: solid var(--medium-gray)1px;
@@ -333,15 +335,16 @@ main img{
     min-width: 204px;
     transition: 0.3s;
     padding-bottom: 20px;
+    cursor: pointer;
 }
 
-.menuFeatures a li:hover {
+.menuFeatures li:hover {
     border-bottom: solid var(--soft-red)2px;
     font-weight: 500;
     color: #000000;
 }
 
-.menuFeatures a li.active {
+.menuFeatures li.active {
     font-weight: 500;
     color: #000000;
     font-style: bold;
@@ -359,6 +362,11 @@ main img{
 
 
 
+.layout2{
+    position: relative;
+    margin-bottom: 60px;
+}
+
 .shapeDesign2 {
     width: 34.028vw;
     min-width: 248px;
@@ -369,15 +377,14 @@ main img{
     background-color: var(--soft-blue);
     position: absolute;
     z-index: -1;
-    left: 0;
-    top: 210%;
+    left: -20%;
+    bottom: -30%;
+    
 
 
 }
 
-.secondSectionImagesContainer .imagem{
-  margin-bottom: 140px;
-}
+
 
 .descriptionContainer {
     width: 34.722vw;
@@ -683,8 +690,6 @@ footer i:hover {
         flex-direction: column;
     }
 
-    .secondSectionContent img {}
-
     .second-section-top {
         width: 300px;
     }
@@ -776,28 +781,8 @@ footer i:hover {
         width: 350px;
         display: block;
     }
-
-
-
 }
 
-@media(max-width:600px){
-    .shapeDesign{
-        top: 90%;
-    }
 
-    .shapeDesign2{
-        top:340%;
-    }
-}
 
-@media(max-width:350px){
-    .shapeDesign{
-        top: 70%;
-    }
-
-    .shapeDesign2{
-        top:280%;
-    }
-}
 
