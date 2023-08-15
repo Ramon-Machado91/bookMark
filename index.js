@@ -1,3 +1,5 @@
+/* Hambuguer menu */
+
 const hamburguer = document.querySelector('#navHam');
 const menuBlue = document.querySelector('#hamburguerNav')
 const closeIcon= document.querySelector('#close')
@@ -9,6 +11,7 @@ closeIcon.addEventListener('click',()=>{
     menuBlue.classList.add('hidden')
 })
 
+/* Tab section */
 const imagens = document.querySelectorAll('.imagem');
 const mensagens = document.querySelectorAll('.descriptionContainer');
 const abas = document.querySelectorAll('.tab')
@@ -52,6 +55,8 @@ function mudaAba3(){
     
 }
 
+/* Accordeon menu */
+
 const perguntas = document.querySelectorAll(".question");
 
 perguntas.forEach(element => {
@@ -65,18 +70,49 @@ perguntas.forEach(element => {
     })
 });
 
-const email = document.getElementById('emailInput');
-const submitButton = document.getElementById('submitButton');
-const erroIcon = document.getElementById('redIcon')
-const msgError = document.getElementById('error')
+/* Email validate */
 
-console.log(email, submitButton, erroIcon, msgError)
+const email = document.getElementById('email');
+const emailField = document.querySelector('.email-field');
+const errorMessage = document.querySelector('.error-message');
+const errorIcon= document.getElementById('redIcon')
+const submitButton =document.getElementById('submitButton')
 
-submitButton.addEventListener('click', ()=>{
-    const emailFormat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-    if(email.value!== emailFormat){
-        msgError.classList.remove('hidden')
-        erroIcon.classList.remove('hidden')
+
+
+const isEmailFormatValid = () => {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+    return regex.test(email.value);
+}
+
+const validateEmail = () => {
+
+    let isEmailValid
+   
+    const isEmailInputEmpty = email.value === '';
+
+    if (isEmailInputEmpty) {
+        errorMessage.classList.remove('hidden');
+        errorIcon.classList.remove('hidden')
+        isEmailValid = false;
     }
-})
+
+    else if (!isEmailFormatValid()) {
+        emailField.classList.add('error');
+        errorMessage.classList.remove('hidden');
+        errorIcon.classList.remove('hidden')
+        isEmailValid = false;
+    }else {
+        errorMessage.classList.add('hidden');
+        errorIcon.classList.add('hidden')
+        isEmailValid = true;
+    }
+
+    return isEmailValid;
+}
+
+function validate (e) {
+    e.preventDefault();
+    validateEmail();
+}

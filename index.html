@@ -105,7 +105,7 @@
       <ul class="menuFeatures">
         <li onclick="mudaAba1()" class=" tab active">Simple Bookmarking</li>
         <li onclick="mudaAba2()" class="tab">Speedy Searching</li>
-        <li  onclick="mudaAba3()" class="tab">Easy Sharing</li>
+        <li onclick="mudaAba3()" class="tab">Easy Sharing</li>
       </ul>
 
 
@@ -189,17 +189,17 @@
         <div class="accordeonFaq">
           <ul>
             <li class="question">
-              
-                <h5>What is Bookmark?</h5>
-              
+
+              <h5>What is Bookmark?</h5>
+
 
               <p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
                 justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
             </li>
             <li class="question">
-              
-                <h5>How can I request a new browser? </h5>
-              
+
+              <h5>How can I request a new browser? </h5>
+
 
               <p class="answer">Vivamus luctus eros aliquet convallis
                 ultricies. Mauris augue massa, ultricies non ligula.
@@ -209,9 +209,9 @@
 
             </li>
             <li class="question">
-              
-                <h5>Is there a mobile app?</h5> 
-              
+
+              <h5>Is there a mobile app?</h5>
+
 
 
               <p class="answer">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum
@@ -220,9 +220,9 @@
                 sollicitudin ex et ultricies bibendum.</p>
             </li>
             <li class=" question">
-               
-                <h5>What about other Chromium browsers?</h5> 
-              
+
+              <h5>What about other Chromium browsers?</h5>
+
 
 
               <p class="answer">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at
@@ -240,12 +240,17 @@
       <div class="email-container">
         <p>35,000+ already joined</p>
         <h3>Stay up-to-date with what <br> we’re doing</h3>
-        <div class="inputEmail">
-          <input id="emailInput" class="emailInput" type="email" name="" id="email-input" placeholder="Enter your email adress">
-          <input id="submitButton" class="redButton" type="submit" value="Contact us">
-          <img  id="redIcon" class="erroIcon hidden" src="./images/icon-error.svg" alt="error icon">
-        </div>
-        <p id="error" class="erroMsg hidden">invalid email format</p>
+
+        <form>
+          <div class="email-field">
+            <input id="email" class="emailInput" type="email" name="" id="email-input"
+              placeholder="Enter your email adress">
+            <input onclick="validate()" id="submitButton" class="redButton" type="submit" value="Contact us">
+            <img id="redIcon" class="error-image hidden" src="./images/icon-error.svg" alt="error icon">
+
+            <p id="error" class="erroMsg hidden">invalid email format</p>
+          </div>
+        </form>
       </div>
 
       <footer>
