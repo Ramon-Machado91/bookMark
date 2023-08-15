@@ -362,7 +362,9 @@ main {
 
 .shapeDesign2 {
     width: 34.028vw;
+    min-width: 248px;
     height: 24.653vw;
+    min-height: 180px;
     border-bottom-right-radius: 13.889vw;
     border-top-right-radius: 13.889vw;
     background-color: var(--soft-blue);
