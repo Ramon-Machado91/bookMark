@@ -52,13 +52,7 @@ function mudaAba3(){
     
 }
 
-
-
-
-
 const perguntas = document.querySelectorAll(".question");
-
-
 
 perguntas.forEach(element => {
     element.addEventListener('click',()=>{
@@ -71,3 +65,18 @@ perguntas.forEach(element => {
     })
 });
 
+const email = document.getElementById('emailInput');
+const submitButton = document.getElementById('submitButton');
+const erroIcon = document.getElementById('redIcon')
+const msgError = document.getElementById('error')
+
+console.log(email, submitButton, erroIcon, msgError)
+
+submitButton.addEventListener('click', ()=>{
+    const emailFormat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    if(email.value!== emailFormat){
+        msgError.classList.remove('hidden')
+        erroIcon.classList.remove('hidden')
+    }
+})

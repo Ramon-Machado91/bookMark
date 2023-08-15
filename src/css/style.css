@@ -596,6 +596,7 @@ main {
     background-color: var(--soft-red);
     width: 250px;
     font-size: 12px;
+    transform: translateX(-15px);
 
 }
 
