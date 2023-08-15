@@ -291,7 +291,7 @@ main {
 
 
 .shapeDesign {
-    width: 490px;
+    width: 34.028vw;
     min-width: 248px;
     height: 24.653vw;
     min-height: 180px;
@@ -300,9 +300,8 @@ main {
     background-color: var(--soft-blue);
     position: absolute;
     z-index: -2;
-    right: 0;
+    right: -5%;
     bottom: -40%;
-    transform: translateX(5%);
 }
 
 .second-section-top {
@@ -371,7 +370,7 @@ main {
     background-color: var(--soft-blue);
     position: absolute;
     z-index: -1;
-    left: -15%;
+    left: -20%;
     bottom: 45%;
 
 
