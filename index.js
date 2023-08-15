@@ -78,41 +78,23 @@ const errorMessage = document.querySelector('.error-message');
 const errorIcon= document.getElementById('redIcon')
 const submitButton =document.getElementById('submitButton')
 
+console.log(email, emailField, errorMessage, errorIcon,submitButton)
 
+submitButton.addEventListener('submit', function(event){
+    
+    const emailValidar = email.value;
 
-
-const isEmailFormatValid = () => {
-    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-    return regex.test(email.value);
-}
-
-const validateEmail = () => {
-
-    let isEmailValid
-   
-    const isEmailInputEmpty = email.value === '';
-
-    if (isEmailInputEmpty) {
+    if(!isValueEmail(emailValidar)){
+        event.preventDefault();
         errorMessage.classList.remove('hidden');
-        errorIcon.classList.remove('hidden')
-        isEmailValid = false;
-    }
+        errorMessage.classList.remove('hidden')
 
-    else if (!isEmailFormatValid()) {
-        emailField.classList.add('error');
-        errorMessage.classList.remove('hidden');
-        errorIcon.classList.remove('hidden')
-        isEmailValid = false;
-    }else {
-        errorMessage.classList.add('hidden');
-        errorIcon.classList.add('hidden')
-        isEmailValid = true;
     }
+})
 
-    return isEmailValid;
+function isValueEmail(emailValidar){
+    var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(emailValidar)
 }
 
-function validate (e) {
-    e.preventDefault();
-    validateEmail();
-}
+
