@@ -626,6 +626,11 @@ footer i:hover {
 }
 
 @media(max-width:600px) {
+    body{
+        overflow-x: hidden;
+        overflow-y:scroll;
+    }
+    
     .hamburguerIcon i {
         display: block;
     }
