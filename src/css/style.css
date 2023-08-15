@@ -29,7 +29,7 @@ body {
     font-size: 1.125rem;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
 
 }
 
@@ -291,7 +291,7 @@ main {
 
 
 .shapeDesign {
-    width: 34.028vw;
+    width: 490px;
     min-width: 248px;
     height: 24.653vw;
     min-height: 180px;
@@ -300,8 +300,9 @@ main {
     background-color: var(--soft-blue);
     position: absolute;
     z-index: -2;
-    right: -5%;
+    right: 0;
     bottom: -40%;
+    transform: translateX(5%);
 }
 
 .second-section-top {
@@ -370,7 +371,7 @@ main {
     background-color: var(--soft-blue);
     position: absolute;
     z-index: -1;
-    left: -12%;
+    left: -15%;
     bottom: 45%;
 
 
