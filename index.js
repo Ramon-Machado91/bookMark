@@ -16,42 +16,19 @@ const imagens = document.querySelectorAll('.imagem');
 const mensagens = document.querySelectorAll('.descriptionContainer');
 const abas = document.querySelectorAll('.tab')
 
-function mudaAba1(){
-    imagens[0].classList.remove('hidden');
-    imagens[1].classList.add('hidden')
-    imagens[2].classList.add('hidden');
-    mensagens[0].classList.remove('hidden');
-    mensagens[1].classList.add('hidden')
-    mensagens[2].classList.add('hidden');
-    abas[0].classList.add('active');
-    abas[1].classList.remove('active')
-    abas[2].classList.remove('active');
-    
-}
 
-function mudaAba2(){
-    imagens[0].classList.add('hidden');
-    imagens[1].classList.remove('hidden')
-    imagens[2].classList.add('hidden');
-    mensagens[0].classList.add('hidden');
-    mensagens[1].classList.remove('hidden')
-    mensagens[2].classList.add('hidden');
-    abas[0].classList.remove('active');
-    abas[1].classList.add('active')
-    abas[2].classList.remove('active');
-    
-}
 
-function mudaAba3(){
-    imagens[0].classList.add('hidden');
-    imagens[1].classList.add('hidden')
-    imagens[2].classList.remove('hidden');
-    mensagens[0].classList.add('hidden');
-    mensagens[1].classList.add('hidden')
-    mensagens[2].classList.remove('hidden');
-    abas[0].classList.remove('active');
-    abas[1].classList.remove('active')
-    abas[2].classList.add('active');
+function mudaAba(index1, index2, index3){
+    imagens[index1].classList.remove('hidden');
+    imagens[index2].classList.add('hidden')
+    imagens[index3].classList.add('hidden');
+    mensagens[index1].classList.remove('hidden');
+    mensagens[index2].classList.add('hidden')
+    mensagens[index3].classList.add('hidden');
+    abas[index1].classList.add('active');
+    abas[index2].classList.remove('active')
+    abas[index3].classList.remove('active');
+    
     
 }
 
